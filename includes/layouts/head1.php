@@ -1,5 +1,5 @@
 <?php
-require_once './server.php';
+  require_once('../logic/server.php');
 ?>
 
 <!DOCTYPE html>
@@ -10,7 +10,7 @@ require_once './server.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My System</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -27,7 +27,10 @@ require_once './server.php';
 <header>
     <nav>
         <ul class="">
-            <li class=""><a href="index.php?logout='1'" class="">Log Out</a></li>
-        </ul>
+        <form action="" method="post">
+          <li class=""><a href="index.php?logout='1'" class="logout" name="logout">Log Out</a></li>
+          <!-- <input type="button" name="logout" class="logout" value="Log Out"> -->
+        </form>
+      </ul>
     </nav>
 </header>
