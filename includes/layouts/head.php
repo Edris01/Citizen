@@ -1,6 +1,5 @@
 <?php
-    require_once './server.php';
-    require_once './register-inc.php'
+    require_once('../logic/server.php');
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My System</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"

@@ -1,4 +1,5 @@
 <?php
+include('./config.php');
 
 // login action for students
 $error = array();
@@ -8,17 +9,17 @@ if (isset($_POST['login_user'])) {
     $password = mysqli_real_escape_string($db, $_POST['password']);
 
 
-    // if (empty($username)) {
-    //     array_push($errors, 'username is required');
-    // }
-    // if (!preg_match("/^[a-zA-z-Z0-9]*/", $username)) {
-    //     array_push($error, 'username must not contain symbols');
-    // }
-    // if (empty($password)) {
-    //     array_push($errors, 'password is required');
-    // }
+    if (empty($username)) {
+        array_push($errors, 'username is required');
+    }
+    if (!preg_match("/^[a-zA-z-Z0-9]*/", $username)) {
+        array_push($error, 'username must not contain symbols');
+    }
+    if (empty($password)) {
+        array_push($errors, 'password is required');
+    }
 
-    // if (count($errors) == 0) {
+    if (count($errors) == 0) {
         $password = md5($password);
 
         $sql = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
@@ -27,11 +28,9 @@ if (isset($_POST['login_user'])) {
         if (mysqli_num_rows($result) == 1) {
             $_SESSION['username'] = $username;
             $_SESSION['success'] = "";
-            header('Location: StudentPayments.php');
+            header('Location: ../../index.php');
         } else {
-            array_push($errors, "username and password dont match");
+            array_push($errors, "username and password don`t match");
         }
-    // }
+    }
 }
-
-?>

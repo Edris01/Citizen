@@ -3,12 +3,13 @@
         header("location: login.php");
     }
 ?>
+
 <?php
-    require_once "head1.php";
+    require_once("./includes/layouts/head1.php");
 ?>
 
     <h1>Home page</h1>
 
 <?php
-    include_once "footer.php";
+    include_once( "./includes/layouts/footer.php");
 ?>
